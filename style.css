@@ -1,0 +1,93 @@
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      font-family: Inter, Arial, sans-serif;
+      background: #fffcf9;
+      color: #1e293b;
+      text-align: center;
+    }
+    h1 { color: #4e89bd; margin: 0 0 8px; font-size: 1.8rem; }
+    .step { color: #64748b; margin: 0 0 40px; }
+
+    /* The flex container. Its styles are switched by JS */
+    .stage { min-height: 240px; }
+    .cards {
+      width: 760px;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 12px;
+      border: 3px dashed #4e89bd;
+      position: relative;
+      text-align: left;
+      transition: width 0.6s;
+    }
+    .cards.narrow { width: 520px; }
+    .cards-label {
+      position: absolute;
+      top: -26px;
+      left: 0;
+      font-weight: bold;
+      color: #4e89bd;
+      font-size: 0.9rem;
+    }
+    .card {
+      background: #c3e6c3;
+      border: 2px solid #1e293b;
+      border-radius: 6px;
+      padding: 12px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .card.big { background: #f9d98b; }
+    /* The measured width shown inside each card */
+    .size {
+      display: block;
+      font-weight: normal;
+      font-size: 0.85rem;
+      color: #475569;
+    }
+
+    .caption {
+      max-width: 680px;
+      margin: 20px auto 8px;
+      font-size: 1.35rem;
+      line-height: 1.5;
+    }
+    .note {
+      max-width: 680px;
+      margin: 0 auto 16px;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: #475569;
+      min-height: 3em;
+    }
+    .code {
+      display: inline-block;
+      font-family: Consolas, monospace;
+      font-size: 1.05rem;
+      background: #fff;
+      border: 2px solid #4e89bd;
+      border-radius: 8px;
+      padding: 8px 16px;
+      min-height: 1.6em;
+      text-align: left;
+      white-space: pre;
+    }
+    .controls { margin-top: 24px; }
+    button {
+      font: inherit;
+      font-size: 1.1rem;
+      padding: 10px 24px;
+      margin: 0 6px;
+      border-radius: 8px;
+      border: 2px solid #4e89bd;
+      background: #4e89bd;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:disabled { opacity: 0.4; cursor: default; }
+    #back { background: #fff; color: #4e89bd; }
+  
